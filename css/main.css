@@ -1,0 +1,306 @@
+/*----- General Styles -----*/
+body{
+    max-width:1680px;
+    font:14pt 'Open Sans', sans-serif;
+    background: -webkit-linear-gradient(top, rgba(236,236,236,.55) 0%,rgba(236,236,236,.55) 80%), url('../images/bg.png') repeat;
+    color:#01060A;
+}
+
+.button{
+    border:1px solid black;
+    padding:2%;
+    border-radius:50px 50px 0 50px;
+    background:#01060A;
+    color:#ECECEC;
+    text-decoration: none;
+    height:auto;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    margin-top:10%;
+    font-size:.75em;
+}
+
+/*----- Nav Bar -----*/
+.navbar-main{
+    width:98%;
+    height:40px;
+    margin:0 auto;
+    padding:0 1%;
+    background:#01060A;
+    color:#ECECEC;
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar-main ul{
+    list-style: none;
+}
+
+.navbar-main ul li{
+    display:inline-block;
+    margin-right:2%;
+    font-family: 'Permanent Marker', cursive;
+}
+.navbar-main ul li a{
+    text-decoration: none;
+    color:inherit;
+    font-size: .75em;
+}
+.navbar-main ul li a:hover{
+    color:#F4D03F;
+}
+
+/*----- Main Landing -----*/
+
+.landing{
+    background:url('../images/live.jpg') top center no-repeat fixed;
+    height:700px;
+    background-size: 100% 100%;
+    position:relative;
+    margin-top:30px;
+}
+
+.band-name{
+    margin:0 auto;
+    padding:2.5%;
+    text-shadow: 1px 1px 1px black;
+}
+.band-name h2{
+    font:2em 'Permanent Marker', cursive;
+    color:#F4D03F;
+    display:inline-block;
+    box-shadow: inset 0 -5px 0 #F4D03F;
+    margin-bottom:0;
+    transform:rotate(-90deg);
+}
+
+.band-name h1 {
+    color:#F4D03F;
+    font-family: 'Permanent Marker', cursive;
+    display:inline-block;
+    box-shadow: inset 0 -5px 0 #F4D03F;
+}
+
+/*----- Main Content, Posts section -----*/
+
+.main h3, .post h4{
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: inset 0 -5px 0 black;
+    margin-top:5%;
+}
+
+.post h4{
+    margin-top:3%;
+    box-shadow: none;
+}
+
+.post p{
+    font-family: 'Rock Salt', cursive;
+    font-size:.75em;
+}
+
+.post-text{
+    border-right: 3px solid black;
+    height:300px;
+    padding:2%;
+}
+
+.post-text:last-of-type{
+    border-right:none;
+}
+
+.post{
+    text-align: center;
+}
+
+/*----- Main Content, photo gallery-----*/
+
+#photos{
+    margin-top:5%;
+    text-align: center;
+}
+.photo img{
+    width:98%;
+    height:200px;
+    border-radius:50px 50px 0 50px;
+}
+
+.image-link:focus{
+    outline:none;
+}
+
+/*----- Main Content, fan club form -----*/
+
+label, input{
+    display:inline-block;
+}
+input[type=text], input[type=email]{
+    float:right;
+    margin:1% 0 1% 2%;
+    width:60%;
+    border:none;
+    border-radius:50px 50px 0 50px;
+}
+
+input[type=text]:focus, input[type=email]:focus{
+    border: 1px solid #000;
+}
+
+.radio label:first-of-type{
+    margin-right:10%;
+}
+
+label{
+    float:left;
+    text-align: center;
+}
+.label-no-float{
+    float:none;
+}
+
+.label-input{
+    border:3px solid black;
+    width:30%;
+    padding:2% 0;
+    border-radius:50px 50px 0 50px;
+    font-size:.7em;
+}
+
+input[required]{
+    border:1px solid #F4D03F;
+}
+
+.radio, .check{
+    margin-top:3%;
+    text-align: center;
+    font-size: .9em;
+}
+
+input[type=submit]{
+    width:30%;
+    font:1em 'Open Sans', sans-serif;
+    margin:3% auto;
+    float:right;
+    border:none;
+    border-radius:50px 50px 0 50px;
+    background:#01060A;
+    color:#ECECEC;
+    padding:2% 0;
+    height:auto;
+}
+input[type=submit]:hover, .button:hover{
+    color:#F4D03F;
+}
+
+/*----- Main content, Tour Table -----*/
+
+table thead{
+    font:1.2em 'Rock Salt', cursive;
+}
+table tbody{
+    font:.75em 'Open Sans', sans-serif;
+}
+
+table tbody tr:nth-child(odd){
+    background:#ECECEC;
+}
+
+table tbody tr td{
+    border:none;
+    padding: 3%;
+    text-align: center;
+}
+
+
+/*----- Media Queries -----*/
+/*----- Large Desktop, Tablet Portrait -----*/
+@media screen and (max-width: 1000px) {
+    .post-text h4{
+        font-size:1em;
+    }
+    .post-text p{
+        font-size:.7em;
+    }
+}
+
+/*----- Mobile Landscape, Tablet-----*/
+@media screen and (max-width: 860px){
+    #live, #join{
+        width:100%;
+    }
+    #live table{
+        margin:0 auto;
+    }
+    .landing{
+        height:400px;
+    }
+}
+
+/*----- Tablet, Mobile -----*/
+@media screen and (max-width: 650px){
+    .post-text p{
+        font: .9em 'Open Sans', sans-serif;
+    }
+    .post .post-text{
+        width:48%;
+    }
+    .post-text:nth-of-type(3){
+        display:none;
+    }
+    .post-text:nth-of-type(2){
+        border-right:none;
+    }
+    .photo img{
+        height:150px;
+    }
+    .band-name h2{
+        box-shadow: none;
+        font-size:2em;
+        display:block;
+        margin-bottom:0;
+        transform:rotate(0deg);
+    }
+}
+
+/*----- Mobile Portrait and Below -----*/
+@media screen and (max-width:550px){
+    .photo{
+        width:30%;
+        display:inline-block;
+    }
+    .photo img{
+        display:inline-block;
+        float:left;
+        margin-right:5%;
+    }
+    .u-full-width{
+        width:100%;
+        padding:0;
+    }
+}
+
+/*----- Mobile -----*/
+@media screen and (max-width:365px){
+    .landing{
+        height:250px;
+    }
+    .band-name h1{
+        box-shadow: none;
+    }
+    .post .post-text{
+        width:100%;
+        border-right:none;
+        border-bottom: 3px solid black;
+        height:250px;
+    }
+    .post-text:nth-of-type(2){
+        border-bottom:none;
+    }
+    table thead th{
+        font-size: .75em;
+    }
+
+}
