@@ -9,7 +9,7 @@ body{
 .button{
     border:1px solid black;
     padding:2%;
-    border-radius:50px 50px 0 50px;
+    border-radius:50px 50px 0;
     background:#01060A;
     color:#ECECEC;
     text-decoration: none;
@@ -25,14 +25,14 @@ footer{
 
 /*----- Nav Bar -----*/
 .navbar-main{
-    width:98%;
+    width:98%; /*-- Set to 98% to allow room for 1% padding on left/right sides --*/
     height:40px;
     margin:0 auto;
     padding:0 1%;
     background:#01060A;
     color:#ECECEC;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
 }
 
 .navbar-main ul{
@@ -119,13 +119,13 @@ footer{
 /*----- Main Content, photo gallery-----*/
 
 #photos{
-    margin-top:5%;
+    margin:5% auto;
     text-align: center;
 }
 .photo img{
     width:98%;
     height:200px;
-    border-radius:50px 50px 0 50px;
+    border-radius:50px 50px 0;
 }
 
 .image-link:focus{
@@ -142,7 +142,7 @@ input[type=text], input[type=email]{
     margin:1% 0 1% 2%;
     width:60%;
     border:none;
-    border-radius:50px 50px 0 50px;
+    border-radius:50px 50px 0;
 }
 
 input[type=text]:focus, input[type=email]:focus{
@@ -165,7 +165,7 @@ label{
     border:3px solid black;
     width:30%;
     padding:2% 0;
-    border-radius:50px 50px 0 50px;
+    border-radius:50px 50px 0;
     font-size:.7em;
 }
 
@@ -185,7 +185,7 @@ input[type=submit]{
     margin:3% auto;
     float:right;
     border:none;
-    border-radius:50px 50px 0 50px;
+    border-radius:50px 50px 0;
     background:#01060A;
     color:#ECECEC;
     padding:2% 0;
@@ -293,7 +293,7 @@ table tbody tr td{
     .post .post-text{
         width:100%;
         border-right:none;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid #000;
         height:250px;
     }
     .post-text:nth-of-type(2){
